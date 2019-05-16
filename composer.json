@@ -1,0 +1,19 @@
+{
+    "name": "imi/robo-contao",
+    "description": "IMI-Contao Tasks for Robo task runner",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iMi digital GmbH",
+            "email": "a.menk@imi.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "iMi\\RoboContao\\" : "src"
+        }
+    },
+    "require": {
+        "consolidation/robo": "^1.0.0"
+    }
+}
