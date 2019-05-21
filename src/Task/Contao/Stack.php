@@ -1,5 +1,5 @@
 <?php
-namespace iMi\RoboRun\Task\Contao;
+namespace iMi\RoboContao\Task\Contao;
 
 use Robo\Task\CommandStack;
 
@@ -28,10 +28,10 @@ class Stack extends CommandStack
 	{
 		$this->executable = $pathToConrun;
 		if (!$this->executable) {
-			$this->executable = $this->findExecutablePhar('imi-conrun');
+			$this->executable = $this->findExecutable('contao-console');
 		}
 		if (!$this->executable) {
-			throw new TaskException(__CLASS__, "Neither local imi-conrun.phar nor global imi-conrun installation could be found.");
+			throw new TaskException(__CLASS__, "Contao 4 console could not be found in your project. You could try to run 'composer install' and try again");
 		}
 	}
 
@@ -50,7 +50,7 @@ class Stack extends CommandStack
      */
     public function run()
     {
-        $this->printTaskInfo("Running Conrun commands...");
+        $this->printTaskInfo("Running Contao 4 console commands...");
         return parent::run();
     }
 }

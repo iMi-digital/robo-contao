@@ -1,5 +1,5 @@
 <?php
-namespace iMi\RoboRun\Task\Contao;
+namespace iMi\RoboContao\Task\Contao;
 
 trait loadShortcuts
 {
